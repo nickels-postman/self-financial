@@ -1,0 +1,486 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "CBA Onboarding Service 2",
+        "version": "v0.1.2"
+    },
+    "paths": {
+        "/health/status": {
+            "get": {
+                "tags": [
+                    "health"
+                ],
+                "summary": "Health Status",
+                "operationId": "health_status_health_status_get",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/health/status5": {
+            "get": {
+                "tags": [
+                    "health"
+                ],
+                "summary": "Health Status5",
+                "operationId": "health_status_health_status_get",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/health/services": {
+            "get": {
+                "tags": [
+                    "health"
+                ],
+                "summary": "Service Check",
+                "description": "Returns a list of related services and their status",
+                "operationId": "service_check_health_services_get",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/graphql/": {
+            "get": {
+                "tags": [
+                    "graphql"
+                ],
+                "summary": "Handle Graphql Explorer",
+                "description": "**Note**: Env var `INTROSPECTION=True` must be set or 405 thrown.",
+                "operationId": "handle_graphql_explorer_graphql__get",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "graphql"
+                ],
+                "summary": "Handle Graphql Query test",
+                "operationId": "handle_graphql_query_graphql__post",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/GraphQlQuery"
+                                    }
+                                ],
+                                "title": " Q"
+                            },
+                            "examples": {
+                                "get_schema": {
+                                    "summary": "Get the schema",
+                                    "description": "JWT Auth is not required for this operation",
+                                    "value": {
+                                        "query": "{__schema {types {name}}}"
+                                    }
+                                },
+                                "get_schemaTEST": {
+                                    "summary": "Get the schema",
+                                    "description": "JWT Auth is not required for this operation",
+                                    "value": {
+                                        "query": "{__schema {types {name}}}"
+                                    }
+                                },
+                                "get_phones": {
+                                    "summary": "Get phone number",
+                                    "description": "JWT Auth *is* required for this operation",
+                                    "value": {
+                                        "query": "{cbaOnboarding {phone}}"
+                                    }
+                                },
+                                "get_phone_and_schema": {
+                                    "summary": "Get phone and schema",
+                                    "description": "",
+                                    "value": {
+                                        "query": "{__schema {types {name}} cbaOnboarding {phone}}"
+                                    }
+                                },
+                                "phone_mutation": {
+                                    "summary": "Phone mutation",
+                                    "value": {
+                                        "query": "mutation {cbaOnboarding {phone: setMemberPhone(number: \"8008008000\")}}"
+                                    }
+                                },
+                                "residential_address_mutation": {
+                                    "summary": "residential address mutation",
+                                    "value": {
+                                        "query": "mutation { cbaOnboarding {setMemberResidentialAddress(address: {address1: \"505 Congress Ave\", address2: \"\", city: \"Austin\", zipCode: \"12345\", state: \"TX\", country: \"USA\"} ) { address1 zipCode }}}"
+                                    }
+                                },
+                                "get_residential_address": {
+                                    "summary": "Get residential address",
+                                    "value": {
+                                        "query": "{cbaOnboarding {residentialAddress { address1 address2}}}"
+                                    }
+                                },
+                                "mailing_address_mutation": {
+                                    "summary": "Mailing address mutation",
+                                    "value": {
+                                        "query": "mutation { cbaOnboarding {setMemberMailingAddress(address: {address1: \"505 Congress Ave\", address2: \"\", city: \"Austin\", zipCode: \"12345\", state: \"TX\", country: \"USA\"} ) { address1 zipCode }}}"
+                                    }
+                                },
+                                "get_mailing_address": {
+                                    "summary": "Get mailing address",
+                                    "value": {
+                                        "query": "{cbaOnboarding {mailingAddress { address1 address2}}}"
+                                    }
+                                },
+                                "get_dob": {
+                                    "summary": "Get date of birth",
+                                    "value": {
+                                        "query": "{cbaOnboarding {dateOfBirth}}"
+                                    }
+                                },
+                                "dob_mutation": {
+                                    "summary": "Date of birth mutation",
+                                    "value": {
+                                        "query": "mutation {cbaOnboarding {setMemberDateOfBirth(dob: {date: \"1970-12-31\"}){id date}}}"
+                                    }
+                                },
+                                "ssn_mutation": {
+                                    "summary": "SSN mutation",
+                                    "value": {
+                                        "query": "mutation {cbaOnboarding {setMemberSSN(ssn: {number: \"123123123\"})}}"
+                                    }
+                                },
+                                "get_ssn_last_four": {
+                                    "summary": "Get SSN last four",
+                                    "value": {
+                                        "query": "{cbaOnboarding {ssnLastFour}}"
+                                    }
+                                },
+                                "fraud_check_mutation": {
+                                    "summary": "Fraud check mutation",
+                                    "value": {
+                                        "query": "mutation { cbaOnboarding {performMemberFraudCheck(ip: \"127.0.0.1\") {decision} }}"
+                                    }
+                                },
+                                "get_fraud_check": {
+                                    "summary": "Get fraud check",
+                                    "value": {
+                                        "query": "{cbaOnboarding {fraudCheck { decision }}}"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "Response Handle Graphql Query Graphql  Post"
+                                },
+                                "examples": {
+                                    "get_schema": {
+                                        "value": {
+                                            "data": {
+                                                "__schema": {
+                                                    "types": [
+                                                        {
+                                                            "name": "Query"
+                                                        },
+                                                        {
+                                                            "name": "Mutation"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "get_schemaTEST": {
+                                        "value": {
+                                            "data": {
+                                                "__schema": {
+                                                    "types": [
+                                                        {
+                                                            "name": "Query"
+                                                        },
+                                                        {
+                                                            "name": "Mutation"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "get_phone": {
+                                        "value": {
+                                            "data": {
+                                                "cbaOnboarding": {
+                                                    "phone": "19174143333"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "get_phone_and_schema": {
+                                        "value": {
+                                            "data": {
+                                                "__schema": {
+                                                    "types": [
+                                                        {
+                                                            "name": "Query"
+                                                        },
+                                                        {
+                                                            "name": "Mutation"
+                                                        },
+                                                        {
+                                                            "name": "__DirectiveLocation"
+                                                        }
+                                                    ]
+                                                },
+                                                "cbaOnboarding": {
+                                                    "phone": "19174143333"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "phone_mutation": {
+                                        "value": {
+                                            "data": {
+                                                "cbaOnboarding": {
+                                                    "phone": "18008008000"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "residential_address_mutation": {
+                                        "value": {
+                                            "data": {
+                                                "cbaOnboarding": {
+                                                    "setMemberResidentialAddress": {
+                                                        "address1": "505 Congress Ave",
+                                                        "zipCode": "12345"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "get_residential_address": {
+                                        "value": {
+                                            "data": {
+                                                "cbaOnboarding": {
+                                                    "residentialAddress": {
+                                                        "address1": "505 Congress Ave",
+                                                        "address2": ""
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "mailing_address_mutation": {
+                                        "value": {
+                                            "data": {
+                                                "cbaOnboarding": {
+                                                    "setMemberMailingAddress": {
+                                                        "address1": "505 Congress Ave",
+                                                        "zipCode": "12345"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "get_mailing_address": {
+                                        "value": {
+                                            "data": {
+                                                "cbaOnboarding": {
+                                                    "mailingAddress": {
+                                                        "address1": "505 Congress Ave",
+                                                        "address2": ""
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "get_dob": {
+                                        "value": {
+                                            "data": {
+                                                "cbaOnboarding": {
+                                                    "dateOfBirth": "1980-09-30"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "dob_mutation": {
+                                        "value": {
+                                            "data": {
+                                                "cbaOnboarding": {
+                                                    "setMemberDateOfBirth": {
+                                                        "id": "d26af95e-1dd6-4066-8dc9-2e9811558ade",
+                                                        "date": "1970-12-31"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "ssn_mutation": {
+                                        "value": {}
+                                    },
+                                    "get_ssn_last_four": {
+                                        "value": {
+                                            "data": {
+                                                "cbaOnboarding": {
+                                                    "ssnLastFour": "9989"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "fraud_check_mutation": {
+                                        "value": {
+                                            "data": {
+                                                "cbaOnboarding": {
+                                                    "performMemberFraudCheck": {
+                                                        "decision": "pass"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "get_fraud_check": {
+                                        "value": {
+                                            "data": {
+                                                "cbaOnboarding": {
+                                                    "fraudCheck": {
+                                                        "decision": "pass"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "GraphQLJWTBearerAuth": []
+                    }
+                ]
+            },
+            "options": {
+                "tags": [
+                    "graphql"
+                ],
+                "summary": "Handle Graphql Explorer",
+                "operationId": "handle_graphql_explorer_graphql__options",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "GraphQlQuery": {
+                "properties": {},
+                "type": "object",
+                "title": "GraphQlQuery"
+            },
+            "HTTPValidationError": {
+                "properties": {
+                    "detail": {
+                        "items": {
+                            "$ref": "#/components/schemas/ValidationError"
+                        },
+                        "type": "array",
+                        "title": "Detail"
+                    }
+                },
+                "type": "object",
+                "title": "HTTPValidationError"
+            },
+            "ValidationError": {
+                "properties": {
+                    "loc": {
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "integer"
+                                }
+                            ]
+                        },
+                        "type": "array",
+                        "title": "Location"
+                    },
+                    "msg": {
+                        "type": "string",
+                        "title": "Message"
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Error Type"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "loc",
+                    "msg",
+                    "type"
+                ],
+                "title": "ValidationError"
+            }
+        },
+        "securitySchemes": {
+            "GraphQLJWTBearerAuth": {
+                "type": "http",
+                "scheme": "bearer"
+            }
+        }
+    }
+}
