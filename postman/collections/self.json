@@ -1,0 +1,1241 @@
+{
+	"info": {
+		"_postman_id": "35e31540-c775-4b1c-92ef-d66407753746",
+		"name": "self",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "25998796-35e31540-c775-4b1c-92ef-d66407753746"
+	},
+	"item": [
+		{
+			"name": "health",
+			"item": [
+				{
+					"name": "Health Status",
+					"id": "6cf5a173-8371-433c-9d53-2988f9b3fa8e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/health/status",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"health",
+								"status"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "6999c546-a28b-4a62-a36a-f57f211a360d",
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/health/status",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"health",
+										"status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				},
+				{
+					"name": "Health Status5",
+					"id": "6762e656-3527-408e-bc40-579225b43ef3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/health/status5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"health",
+								"status5"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "8193b7f8-5e8c-43be-a750-9900df6a0a2b",
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/health/status5",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"health",
+										"status5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				},
+				{
+					"name": "Service Check",
+					"id": "b208a6ef-2f31-427b-9e3e-fd981c1e2377",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/health/services",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"health",
+								"services"
+							]
+						},
+						"description": "Returns a list of related services and their status"
+					},
+					"response": [
+						{
+							"id": "df1942f3-e753-4b73-b134-be40bc574681",
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/health/services",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"health",
+										"services"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				}
+			],
+			"id": "6d45c569-1110-4967-952b-50a4b91083f2"
+		},
+		{
+			"name": "graphql",
+			"item": [
+				{
+					"name": "Handle Graphql Explorer",
+					"id": "b4585a7f-681e-43ef-992f-de71effc34a0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/graphql/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"graphql",
+								""
+							]
+						},
+						"description": "**Note**: Env var `INTROSPECTION=True` must be set or 405 thrown."
+					},
+					"response": [
+						{
+							"id": "035b353e-4ad6-47f8-858a-ab0486d40e75",
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/graphql/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"graphql",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				},
+				{
+					"name": "Handle Graphql Query test",
+					"id": "6a05e801-58b4-4da1-953c-4a6003598e5b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"query\": \"{__schema {types {name}}}\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/graphql/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "47dc2ffb-32d4-4f99-b84d-92867083fb21",
+							"name": "get_schema",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": \"{__schema {types {name}}}\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/graphql/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"graphql",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"__schema\": {\n      \"types\": [\n        {\n          \"name\": \"Query\"\n        },\n        {\n          \"name\": \"Mutation\"\n        }\n      ]\n    }\n  }\n}"
+						},
+						{
+							"id": "0e5d58e0-a65f-4965-8bde-5b14c1b1e19b",
+							"name": "get_schemaTEST",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": \"{__schema {types {name}}}\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/graphql/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"graphql",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"__schema\": {\n      \"types\": [\n        {\n          \"name\": \"Query\"\n        },\n        {\n          \"name\": \"Mutation\"\n        }\n      ]\n    }\n  }\n}"
+						},
+						{
+							"id": "5acb75ff-ae65-4f65-898e-2348c62364f7",
+							"name": "get_phone",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": \"{cbaOnboarding {phone}}\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/graphql/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"graphql",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"cbaOnboarding\": {\n      \"phone\": \"19174143333\"\n    }\n  }\n}"
+						},
+						{
+							"id": "e9c956fa-95ff-40dd-95d9-207ca5956282",
+							"name": "get_phone_and_schema",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": \"{__schema {types {name}} cbaOnboarding {phone}}\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/graphql/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"graphql",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"__schema\": {\n      \"types\": [\n        {\n          \"name\": \"Query\"\n        },\n        {\n          \"name\": \"Mutation\"\n        },\n        {\n          \"name\": \"__DirectiveLocation\"\n        }\n      ]\n    },\n    \"cbaOnboarding\": {\n      \"phone\": \"19174143333\"\n    }\n  }\n}"
+						},
+						{
+							"id": "6a554100-9a99-4fd0-ae49-3fe996ec7f7c",
+							"name": "phone_mutation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": \"mutation {cbaOnboarding {phone: setMemberPhone(number: \\\"8008008000\\\")}}\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/graphql/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"graphql",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"cbaOnboarding\": {\n      \"phone\": \"18008008000\"\n    }\n  }\n}"
+						},
+						{
+							"id": "064778ee-3e9e-40b0-88bc-516a9efd1587",
+							"name": "residential_address_mutation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": \"mutation { cbaOnboarding {setMemberResidentialAddress(address: {address1: \\\"505 Congress Ave\\\", address2: \\\"\\\", city: \\\"Austin\\\", zipCode: \\\"12345\\\", state: \\\"TX\\\", country: \\\"USA\\\"} ) { address1 zipCode }}}\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/graphql/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"graphql",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"cbaOnboarding\": {\n      \"setMemberResidentialAddress\": {\n        \"address1\": \"505 Congress Ave\",\n        \"zipCode\": \"12345\"\n      }\n    }\n  }\n}"
+						},
+						{
+							"id": "ebd9475b-e6c1-4e9d-b0b0-569a89635cd7",
+							"name": "get_residential_address",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": \"{cbaOnboarding {residentialAddress { address1 address2}}}\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/graphql/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"graphql",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"cbaOnboarding\": {\n      \"residentialAddress\": {\n        \"address1\": \"505 Congress Ave\",\n        \"address2\": \"\"\n      }\n    }\n  }\n}"
+						},
+						{
+							"id": "190aebde-cdda-4ec4-ad90-d96ad47b33c2",
+							"name": "mailing_address_mutation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": \"mutation { cbaOnboarding {setMemberMailingAddress(address: {address1: \\\"505 Congress Ave\\\", address2: \\\"\\\", city: \\\"Austin\\\", zipCode: \\\"12345\\\", state: \\\"TX\\\", country: \\\"USA\\\"} ) { address1 zipCode }}}\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/graphql/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"graphql",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"cbaOnboarding\": {\n      \"setMemberMailingAddress\": {\n        \"address1\": \"505 Congress Ave\",\n        \"zipCode\": \"12345\"\n      }\n    }\n  }\n}"
+						},
+						{
+							"id": "bb5a9fc7-1ac5-487c-acc5-2c168159ec84",
+							"name": "get_mailing_address",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": \"{cbaOnboarding {mailingAddress { address1 address2}}}\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/graphql/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"graphql",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"cbaOnboarding\": {\n      \"mailingAddress\": {\n        \"address1\": \"505 Congress Ave\",\n        \"address2\": \"\"\n      }\n    }\n  }\n}"
+						},
+						{
+							"id": "465bfe7c-48dd-45d8-b987-b03cc8f73e7f",
+							"name": "get_dob",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": \"{cbaOnboarding {dateOfBirth}}\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/graphql/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"graphql",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"cbaOnboarding\": {\n      \"dateOfBirth\": \"1980-09-30\"\n    }\n  }\n}"
+						},
+						{
+							"id": "215ea415-fee1-4ed5-b2cb-71f322093d76",
+							"name": "dob_mutation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": \"mutation {cbaOnboarding {setMemberDateOfBirth(dob: {date: \\\"1970-12-31\\\"}){id date}}}\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/graphql/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"graphql",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"cbaOnboarding\": {\n      \"setMemberDateOfBirth\": {\n        \"id\": \"d26af95e-1dd6-4066-8dc9-2e9811558ade\",\n        \"date\": \"1970-12-31\"\n      }\n    }\n  }\n}"
+						},
+						{
+							"id": "07a29d8e-d3a0-4d28-8ce7-5f406a72386b",
+							"name": "ssn_mutation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": \"mutation {cbaOnboarding {setMemberSSN(ssn: {number: \\\"123123123\\\"})}}\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/graphql/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"graphql",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						},
+						{
+							"id": "588d053b-dc32-4675-8648-10bd216606f9",
+							"name": "get_ssn_last_four",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": \"{cbaOnboarding {ssnLastFour}}\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/graphql/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"graphql",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"cbaOnboarding\": {\n      \"ssnLastFour\": \"9989\"\n    }\n  }\n}"
+						},
+						{
+							"id": "357643d0-c759-4b7a-bb10-eb73e3a37b7e",
+							"name": "fraud_check_mutation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": \"mutation { cbaOnboarding {performMemberFraudCheck(ip: \\\"127.0.0.1\\\") {decision} }}\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/graphql/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"graphql",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"cbaOnboarding\": {\n      \"performMemberFraudCheck\": {\n        \"decision\": \"pass\"\n      }\n    }\n  }\n}"
+						},
+						{
+							"id": "967ba0c0-10bd-4ef2-b88e-5cac03d787be",
+							"name": "get_fraud_check",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": \"{cbaOnboarding {fraudCheck { decision }}}\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/graphql/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"graphql",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"cbaOnboarding\": {\n      \"fraudCheck\": {\n        \"decision\": \"pass\"\n      }\n    }\n  }\n}"
+						},
+						{
+							"id": "db6daea7-0e55-4932-abb9-51885af89952",
+							"name": "Get the schema",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": \"{__schema {types {name}}}\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/graphql/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"graphql",
+										""
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"dolore esse ut ad\",\n        \"dolore dolore nisi\"\n      ],\n      \"msg\": \"Duis nostrud Ut minim\",\n      \"type\": \"laboris\"\n    },\n    {\n      \"loc\": [\n        \"aute incididunt anim\",\n        \"magna voluptate sed aute\"\n      ],\n      \"msg\": \"nostrud sunt\",\n      \"type\": \"reprehenderit consequat esse dolore adipisicing\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Handle Graphql Explorer",
+					"id": "ccde2ad8-9772-4771-b0a9-8f830a672f99",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "OPTIONS",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/graphql/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "4d435450-8ad4-47eb-89fb-3ca0ff9338cc",
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "OPTIONS",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/graphql/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"graphql",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				}
+			],
+			"id": "612d2d1b-1b31-473f-b178-a790e3f84ee4"
+		}
+	],
+	"variable": [
+		{
+			"id": "76b1cf22-0adc-4d48-b3a7-2397c6830d8a",
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
