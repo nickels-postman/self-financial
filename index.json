@@ -24,7 +24,7 @@
                 }
             }
         },
-        "/health/status5": {
+        "/health/status3": {
             "get": {
                 "tags": [
                     "health"
